@@ -1,6 +1,8 @@
 name: Enable Auto-Merge
 on:
   - push
+permissions:
+  contents: write
 jobs:
   Enable-Auto-Merge:
     runs-on: ubuntu-latest
