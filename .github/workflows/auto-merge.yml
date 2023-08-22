@@ -1,0 +1,11 @@
+name: Enable Auto-Merge
+on:
+  - push
+jobs:
+  Enable-Auto-Merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge
+        run: gh pr merge --merge --auto "1"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
