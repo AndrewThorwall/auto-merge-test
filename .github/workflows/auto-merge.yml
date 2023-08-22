@@ -1,6 +1,6 @@
 name: Enable Auto-Merge
 on:
-  - push
+  - pull_request
 permissions:
   contents: write
 jobs:
