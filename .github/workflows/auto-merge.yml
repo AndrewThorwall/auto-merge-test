@@ -1,0 +1,13 @@
+name: Enable Auto-Merge
+on:
+  - push
+permissions:
+  contents: write
+jobs:
+  Enable-Auto-Merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge
+        run: gh pr merge --merge --auto --repo AndrewThorwall/auto-merge-test ${{ github.ref_name }}
+        env:
+          GH_TOKEN: ${{ github.token }}
